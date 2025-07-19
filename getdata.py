@@ -1,6 +1,9 @@
 from kagglehub import dataset_download
 from shutil import copy
+import os
 
+if not os.path.exists("data"):
+    os.makedirs("data")
 
 files = ["emnist-balanced-train.csv", "emnist-balanced-test.csv", "emnist-balanced-mapping.txt"]
 

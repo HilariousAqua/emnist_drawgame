@@ -107,6 +107,8 @@ test_acc = model.evaluate(x_test, y_test)
 print(f"acc: {test_acc[1]}")
 
 #export
+if not os.path.exists("models"):
+    os.mkdir("models")
 model.save('models/emnist_model2.keras')
 
 
